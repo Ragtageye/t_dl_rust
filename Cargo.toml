@@ -1,0 +1,13 @@
+[package]
+name = "t_dl_rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "3.2.22"
+random-number = "0.1.8"
+slugify-rs = "0.0.3"
+tokio = {version = "1.21.2", features = ["full"] }
+twitter-v2 = "0.1.8"
