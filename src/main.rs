@@ -18,7 +18,7 @@ struct YtInputs {
 
 async fn set_up() {
 
-    let bearer_token = read_to_string("/home/alexc/projects/rust/testing/bearer_token.txt").unwrap();
+    let bearer_token = read_to_string("/home/alexc/Projects/rust/t_dl_rust/bearer_token.txt").unwrap();
     
     let auth = twitter_v2::authorization::BearerToken::new(format!("{}", bearer_token.trim()));
     let user = twitter_v2::TwitterApi::new(auth.clone())
