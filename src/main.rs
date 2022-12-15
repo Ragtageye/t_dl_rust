@@ -79,11 +79,12 @@ fn downloader(value: YtInputs) {
 
     for link in value.yt_links.iter() {
         let n: u32 = random!(..99999);
+        println!("These are the values:\n   title: {:#?}\n     link: {:#?}\n", value.yt_title.clone(), value.yt_links.clone());
         let mut test_result = value.yt_title.clone();
         if test_result.chars().nth(0).is_none() == true {
             test_result = format!("[{}]", n);
-        } else if test_result.len() > 6 {
-            test_result = format!("{}[{}]", &value.yt_title.clone()[..(value.yt_title.len() - 7)], n);
+        } else if test_result.len() > 248 {
+            test_result = format!("{}[{}]", &value.yt_title.clone()[..230], n);
         } else {
             test_result = format!("{}[{}]", &value.yt_title.clone(), n);
         }
